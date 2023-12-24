@@ -30,6 +30,7 @@ const styles = {
     background: "var(--gray-800)",
     borderRadius: "8px",
     overflow: "hidden",
+    height: "15rem"
   },
   cover: {
     width: "100%",

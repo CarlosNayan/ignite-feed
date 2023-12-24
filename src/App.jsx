@@ -8,8 +8,8 @@ const postsData = [
     author: "Jane Cooper",
     role: "Dev Front-end",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    publishedAt: "11-06-2022 08:13 AM",
+      "https://images.unsplash.com/photo-1530047198515-516ff90fc4d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8fHw%3D",
+    publishedAt: "11/06/2022 08:13 AM",
     content: `Fala galeraa 👋! Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀.`,
     link: "👉 jane.design/doctorcare",
     hashs: ["#novoprojeto", "#nlw", "#rocketseat"],
@@ -20,10 +20,10 @@ const postsData = [
     role: "Dev Front-end",
     avatar:
       "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    publishedAt: "08-06-2022 16:58 AM",
+    publishedAt: "08/06/2022 16:58 AM",
     content: `Fala pessoal 👋! Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻.`,
     link: "👉 devonlane.design",
-    hashs: ["#uiux", "#userexperience"],
+    hashs: ["#uxui", "#userexperience"],
   },
 ];
 export function App() {
@@ -36,8 +36,8 @@ export function App() {
           {postsData.map((item, index) => {
             return (
               <Post
-                key={item.id}
-                index={index}
+                key={`${item.id}_${item.author}_${index}`}
+                objIndex={index}
                 author={item.author}
                 role={item.role}
                 avatar={item.avatar}
